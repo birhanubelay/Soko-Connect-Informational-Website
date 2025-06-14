@@ -8,6 +8,20 @@ body {
     overflow-x: hidden;
     margin-left: -0;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+.intro {
+    position: fixed;
+    border: none;
+    background-color: rgba(101, 143, 61, 1);
+    text-align: center;
+    color: white;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
 
 .navigation_bar {
     display: flex;
@@ -16,15 +30,15 @@ body {
     align-items: center;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 5vh;
     left: 0;
+    z-index: 1;
 
     img {
         width: 8%;
-        height: 8%;
+        height: 6%;
         padding-left: 10%;
     }
-
 }
 
 .nav-links {
@@ -41,15 +55,14 @@ body {
 
 .nav-links li a:hover {
     text-decoration: underline;
+    color:orange;
 }
 
 #home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/vegatables.jpg);
-
     background-repeat: no-repeat;
     height: 95vh;
     background-size: cover;
-    margin-top: 5%;
     line-height: 1.6;
 
     h1 {
@@ -64,7 +77,6 @@ body {
     text-align: center;
     margin: auto;
 }
-
 #home p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
@@ -80,7 +92,7 @@ body {
 }
 
 #get_btn:hover {
-    background-color: #27ae60;
+    background-color: rgba(101, 143, 61, 1);
 }
 
 .features {
@@ -91,33 +103,29 @@ body {
     background-color: #fff;
     flex-wrap: wrap;
 }
-
 .feature {
     text-align: center;
     max-width: 300px;
     padding: 2rem;
 }
-
 .feature h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
-
-.banner {
+.discount {
     background-color: orange;
     padding: 20px;
     text-align: center;
     color: black;
     border-radius: 10px;
 }
-
-.banner h1 {
-    font-size: 1.5em;
+.discount h1 {
+    font-size: 250%;
     margin: 0 0 10px 0;
 }
 
-.banner p {
-    font-size: 1em;
+.discount p {
+    font-size: 21px;
     margin: 0 0 20px 0;
 }
 
@@ -144,8 +152,8 @@ body {
 
 .price {
     position: absolute;
-    top: -9px;
-    left: 10%;
+    top: -10px;
+    left: 15%;
     transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.8);
     padding: 8px 10px;
@@ -155,7 +163,7 @@ body {
 
 .original-price {
     text-decoration: line-through;
-    color: #777;
+    color:red;
 }
 
 .discounted-price {
@@ -175,40 +183,20 @@ body {
 
     h1 {
         font-size: 400%;
-        color: #097737;
+        color:rgba(101, 143, 61, 1);
         text-align: center;
     }
 }
 
-.discount {
-    background-color: orange;
-    padding: 2%;
-
-    .discount-items {
-        display: flex;
-        width: 80%;
-        margin: auto;
-        justify-content: space-between;
-        align-items: center;
-
-    }
-
-    img {
-        height: 180px;
-        width: 220px;
-        border-radius: 20px;
-    }
-
-    h2 {
-        text-align: center;
-        font-size: 300%;
-    }
-
-    p {
-        font-size: x-larger;
-    }
+#contact-us-button{
+    background-color: rgba(101, 143, 61, 1);
+    width:25%;
+    padding: 2% 2% 2% 5%;
+    border: none;
+    border-radius: 20px;
+    color:white;
+    font-size: 1.2em;
 }
-
 
 .product-categories {
     display: flex;
@@ -218,52 +206,57 @@ body {
     margin: auto;
     text-align: center;
     padding-top: 5%;
-
+    flex-wrap: wrap;
     img {
         height: 300px;
         width: 400px;
+        position: relative;
+        z-index: -1;
     }
-
     .item span {
-        background: rgba(0, 128, 0, 0.7);
+        border: none;
+        background-color: rgba(101, 143, 61, 1);
         color: white;
         padding: 5px 10px;
-        width: 20%;
-        left: 5%;
+        position: relative;
+        left: 5vw;
 
     }
 }
 
 .fresh-grocery {
+    line-height: 1.6;
     button {
-        background-color: #097737;
-        padding: 3%;
+        background-color: rgba(101, 143, 61, 1);
+         padding: 3% 3% 3% 5%;
         width: 30%;
         border: none;
         border-radius: 20px;
         color: white;
+        margin-left: 30%;
+        font-size: 18px;
     }
-
     h2 {
         font-size: 300%;
-        color: #097737;
+        color:rgba(101, 143, 61, 1);
+    }
+
+    p {
+        font-size: 21px;
     }
 }
-
 .products {
     padding: 2rem;
     text-align: center;
     flex-wrap: wrap;
-
     img {
         height: 200px;
         width: 250px;
         border-radius: 20px;
     }
-
     h1 {
         font-size: 400%;
-        color: #097737;
+        color: rgba(101, 143, 61, 1);
     }
 }
 
@@ -279,43 +272,52 @@ body {
     font-family: itim;
     src: url(Itim-Regular.ttf);
 }
+
 #testimonials {
     padding: 0.5vw;
     text-align: center;
     border: none;
-  background-color: rgba(164, 199, 120, 1);
-  font-family: poppins;
-  width: 100vw;
-  margin-left: -2vw;
+    margin-top: 5%;
+    background-color: rgba(164, 199, 120, 1);
+    font-family: poppins;
+    width: 100vw;
+    margin-left: -2vw;
 }
+
 .testimonials h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+
 .testimonial-grid {
-   display: flex;
-   margin-left: 7vw;
-    gap: 17vw;
+    display: flex;
+    margin-left: 7vw;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
 }
-.testimonial{
+
+.testimonial {
     border: none;
-  background-color: rgba(164, 199, 120, 1);
+    background-color: rgba(164, 199, 120, 1);
     padding: 1.5rem;
     border-radius: 5px;
     width: 15vw;
     margin-top: 5vh;
 }
-.second-testimonial{
+
+.second-testimonial {
     border: none;
-  background-color: rgba(164, 199, 120, 1);
+    background-color: rgba(164, 199, 120, 1);
     padding: 1.5rem;
     border-radius: 5px;
     width: 15vw;
     margin-top: 5vh;
 }
-.third-testimonial{
+
+.third-testimonial {
     border: none;
-  background-color: rgba(164, 199, 120, 1);
+    background-color: rgba(164, 199, 120, 1);
     padding: 1.5rem;
     border-radius: 5px;
     width: 15vw;
@@ -325,35 +327,45 @@ body {
     font-style: italic;
     margin-bottom: 1rem;
 }
+
 #get-app {
     padding: 2rem;
     margin-left: 10vw;
     display: flex;
-    gap:20vw;
+    gap: 15vw;
+    margin-top: -5vh;
+    position: relative;
+    top: 5vh;
 }
-#get-app h2{
+
+#get-app h2 {
     font-size: 4em;
     font-family: itim;
     margin-left: 1.5vw;
 }
-#get-app p{
+
+#get-app p {
     font-family: poppins;
+    position: relative; 
 }
-#first_phone{
+
+#first_phone {
     width: 22vw;
     height: 80vh;
     position: relative;
     top: 20vh;
     left: 3vw;
 }
-#second_phone{
+
+#second_phone {
     width: 23vw;
-     height: 80vh;
+    height: 80vh;
     position: relative;
     z-index: -1;
-     top: 15vh;
+    top: 15vh;
 }
-#play-store{
+
+#play-store {
     padding: 0.00vw 2vw;
     border-radius: 30px;
     cursor: pointer;
@@ -361,31 +373,40 @@ body {
     border: none;
     background-color: black;
 }
-#play{
+
+#play {
     color: white;
     font-size: 2em;
+    
 }
-button h1{
+
+button h1 {
     font-size: 1em;
 }
-button{
+
+button {
     display: flex;
     text-align: center;
 }
-span{
+
+span {
     color: white;
 }
+
 .get-app h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+
 .get-app .btn {
     background-color: white;
-    color:green;
+    color: green;
 }
+
 .get-app .btn:hover {
     background-color: #F4F4F4;
 }
+
 #contact {
     position: relative;
     z-index: 1;
@@ -397,6 +418,7 @@ span{
     margin-left: -2vw;
     width: 100vw;
 }
+
 #contact h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -405,14 +427,16 @@ span{
     color: white;
     font-family: poppins;
 }
+
 #contact form {
     max-width: 600px;
-   margin-left: 5vw;
+    margin-left: 5vw;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 50vw;
 }
+
 #contact input,
 #contact textarea {
     padding: 0.8rem;
@@ -420,12 +444,14 @@ span{
     border-radius: 5px;
     font-size: 1rem;
 }
+
 #contact textarea {
     resize: vertical;
     min-height: 100px;
 }
+
 #contact .btn {
-    background-color:rgba(238, 171, 62, 1);
+    background-color: rgba(238, 171, 62, 1);
     color: white;
     border: none;
     cursor: pointer;
@@ -433,63 +459,76 @@ span{
     padding: 0.5vw;
     border-radius: 20px;
 }
-.btn p{
+
+.btn p {
     margin-left: 1.2vw;
 }
+
 #contact .btn:hover {
     background-color: #27AE60;
 }
+
 .contact-info {
     font-family: poppins;
     border: none;
     background-color: white;
     margin-top: -3.3vh;
-    padding: 2vw;
+    width:20%;
 }
+
 .contact-info p {
-    margin-top:5vh
+    margin-top: 5vh
 }
-.name{
+
+.name {
     display: flex;
     gap: 6.8vw;
     width: 8vw;
 }
-.get-in-touch{
+
+.get-in-touch {
     margin-left: 7vw;
 }
-.testimonial img{
+
+.testimonial img {
     width: 8vw;
-    height:16vh;
+    height: 16vh;
     border-radius: 400px;
 }
-.second-testimonial img{
+
+.second-testimonial img {
     width: 8vw;
-    height:16vh;
+    height: 16vh;
     border-radius: 400px;
 }
-.third-testimonial img{
+
+.third-testimonial img {
     width: 8vw;
-    height:16vh;
+    height: 16vh;
     border-radius: 400px;
 }
-#testimonials p{
+
+#testimonials p {
     font-size: 1.5em;
 }
-#testimonials h2{
+
+#testimonials h2 {
     font-size: 2em;
 }
-#testimonials h1{
+
+#testimonials h1 {
     font-size: 3em;
     color: green;
 }
-#reach{
+
+#reach {
     font-size: 1.5em;
     color: #000;
 }
+
 footer {
-   background-color: rgba(101, 143, 61, 1);
+    background-color: rgba(101, 143, 61, 1);
     color: white;
-    text-align: center;
     padding: 1rem;
     font-family: poppins;
     width: 100vw;
@@ -497,9 +536,9 @@ footer {
     position: relative;
     top: -1vh;
 }
+
 @media (max-width: 750px) {
-     .navigation_bar {
-       
+    .navigation_bar {
         gap: 1rem;
         padding: 1rem;
 
@@ -508,10 +547,12 @@ footer {
             padding-left: 0;
         }
     }
+
     .nav-links {
         gap: 0.5rem;
         font-size: x-small;
-        a{
+
+        a {
             font-size: 10px;
         }
     }
@@ -560,12 +601,12 @@ footer {
         object-fit: cover;
     }
 
-   
-       .banner h1 {
+
+    .discount h1 {
         font-size: 1em;
     }
 
-    .banner p {
+    .discount p {
         font-size: 0.8em;
     }
 
@@ -594,6 +635,8 @@ footer {
     }
 
     .fresh-grocery {
+        text-align: center;
+
         button {
             width: 50%;
             padding: 2%;
@@ -625,12 +668,11 @@ footer {
 }
 
 @media (min-width: 751px) and (max-width: 999px) {
-
-    .banner h1 {
+    .discount h1 {
         font-size: 1.3em;
     }
 
-    .banner p {
+    .discount p {
         font-size: 0.9em;
     }
 
@@ -682,8 +724,8 @@ footer {
         }
     }
 
-    
-  
+
+
 
     .product-categories {
         width: 90%;
@@ -709,7 +751,6 @@ footer {
             font-size: 2rem;
         }
     }
-
     .products {
         padding: 1.5rem;
 
@@ -730,11 +771,11 @@ footer {
 }
 
 @media (min-width: 1000px) and (max-width: 1300px) {
-    .banner h1 {
+    .discount h1 {
         font-size: 1.8em;
     }
 
-    .banner p {
+    .discount p {
         font-size: 1.2em;
     }
 
@@ -784,7 +825,6 @@ footer {
             font-size: 3.5rem;
         }
     }
-
     .product-categories {
         width: 85%;
         gap: 2rem;
