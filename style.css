@@ -11,7 +11,6 @@ body {
 html{
     scroll-behavior: smooth;
 }
-
 .intro {
     position: fixed;
     border: none;
@@ -294,6 +293,7 @@ html{
     margin-left: 7vw;
     width: 80%;
     margin: auto;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -664,6 +664,9 @@ footer {
         flex-direction: column;
         gap: 2rem;
         width: 90%;
+    }
+    .testimonial-grid{
+        width:100%;
     }
 }
 
