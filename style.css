@@ -6,7 +6,8 @@
 body {
     font-family: poppins;
     overflow-x: hidden;
-    margin-left: -0;
+    /* margin-left: -0; */
+    margin:0;
 }
 html{
     scroll-behavior: smooth;
@@ -75,6 +76,7 @@ html{
     width: 70%;
     text-align: center;
     margin: auto;
+    margin-top: 20vh;
 }
 #home p {
     font-size: 1.2rem;
@@ -100,7 +102,7 @@ html{
     gap: 2rem;
     padding: 2rem;
     background-color: #fff;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .feature {
     text-align: center;
@@ -117,6 +119,8 @@ html{
     text-align: center;
     color: black;
     border-radius: 10px;
+    margin-left: 5vh;
+    margin-right: 5vh;
 }
 .discount h1 {
     font-size: 250%;
@@ -132,7 +136,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 70%;
     margin: auto;
     padding: 3rem;
@@ -147,6 +151,11 @@ html{
     height: 200px;
     width: 250px;
     border-radius: 5px;
+    display: block;
+    object-fit: cover;
+    
+
+
 }
 
 .price {
@@ -179,11 +188,12 @@ html{
     width: 60%;
     margin: auto;
     justify-content: space-between;
+    margin-bottom: 10vh;
 
     h1 {
         font-size: 400%;
         color:rgba(101, 143, 61, 1);
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -213,12 +223,14 @@ html{
         z-index: -1;
     }
     .item span {
-        border: none;
         background-color: rgba(101, 143, 61, 1);
         color: white;
-        padding: 5px 10px;
-        position: relative;
-        left: 5vw;
+        padding: 5px 30px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        border-radius: 0 5px 0 0; 
 
     }
 }
@@ -270,62 +282,6 @@ html{
 @font-face {
     font-family: itim;
     src: url(Itim-Regular.ttf);
-}
-
-#testimonials {
-    padding: 0.5vw;
-    text-align: center;
-    border: none;
-    margin-top: 5%;
-    background-color: rgba(164, 199, 120, 1);
-    font-family: poppins;
-    width: 100vw;
-    margin-left: -2vw;
-}
-
-.testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.testimonial-grid {
-    display: flex;
-    margin-left: 7vw;
-    width: 80%;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.testimonial {
-    border: none;
-    background-color: rgba(164, 199, 120, 1);
-    padding: 1.5rem;
-    border-radius: 5px;
-    width: 15vw;
-    margin-top: 5vh;
-}
-
-.second-testimonial {
-    border: none;
-    background-color: rgba(164, 199, 120, 1);
-    padding: 1.5rem;
-    border-radius: 5px;
-    width: 15vw;
-    margin-top: 5vh;
-}
-
-.third-testimonial {
-    border: none;
-    background-color: rgba(164, 199, 120, 1);
-    padding: 1.5rem;
-    border-radius: 5px;
-    width: 15vw;
-    margin-top: 5vh;
-}
-.testimonial p {
-    font-style: italic;
-    margin-bottom: 1rem;
 }
 
 #get-app {
@@ -490,40 +446,10 @@ span {
     margin-left: 7vw;
 }
 
-.testimonial img {
-    width: 8vw;
-    height: 16vh;
-    border-radius: 400px;
-}
-
-.second-testimonial img {
-    width: 8vw;
-    height: 16vh;
-    border-radius: 400px;
-}
-
-.third-testimonial img {
-    width: 8vw;
-    height: 16vh;
-    border-radius: 400px;
-}
-
-#testimonials p {
-    font-size: 1.5em;
-}
-
-#testimonials h2 {
-    font-size: 2em;
-}
-
-#testimonials h1 {
-    font-size: 3em;
-    color: green;
-}
-
 #reach {
     font-size: 1.5em;
     color: #000;
+    text-align: center;
 }
 
 footer {
@@ -532,55 +458,626 @@ footer {
     padding: 1rem;
     font-family: poppins;
     width: 100vw;
-    margin-left: -2vw;
     position: relative;
-    top: -1vh;
+    text-align: center;
+  
 }
 
-@media (max-width: 750px) {
+
+
+
+
+
+#testimonials {
+    padding: 2rem 1rem;
+    background-color: #a4c778; 
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+  }
+  
+  #testimonials h1 {
+    font-size: 3em;
+    color: green;
+    margin-bottom: 0.5rem;
+  }
+  
+  #testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: nowrap; /* Default no wrap on large screens */
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .testimonial, .second-testimonial, .third-testimonial {
+    background-color: rgba(164, 199, 120, 1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 250px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .testimonial img,
+  .second-testimonial img,
+  .third-testimonial img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial p,
+  .second-testimonial p,
+  .third-testimonial p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #000;
+  }
+  
+  .testimonial h3,
+  .second-testimonial h3,
+  .third-testimonial h3 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+ 
+@media screen and (max-width: 750px) {
+
+    #contact-us-button{
+        background-color: rgba(101, 143, 61, 1);
+        width:25%;
+        padding: 2% 2% 2% 5%;
+        border: none;
+        border-radius: 20px;
+        color:white;
+        font-size: 1.2em;
+        margin-left: 30vh;
+    }
+    .discount {
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding: 15px;
+        border-radius: 8px;
+      }
+    
+      .discount h1 {
+        font-size: 1.8rem;
+        margin: 0 0 8px 0;
+      }
+    
+      .discount p {
+        font-size: 1rem;
+        margin: 0 0 15px 0;
+      }
+
+    html, body {
+      overflow-x: hidden;
+    }
+        #contact {
+          flex-direction: column;
+          gap: 2rem;
+          padding: 1rem 1.5rem;
+          margin-left: 0;
+          width: 100%;
+          box-sizing: border-box;
+        }
+      
+        #contact h2 {
+          font-size: 1.8rem;
+          margin-left: 0;
+          margin-bottom: 2rem;
+          text-align: center;
+          color: white;
+        }
+      
+        #contact form {
+          width: 100%;
+          max-width: 100%;
+          margin-left: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      
+        #contact input,
+        #contact textarea {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1rem;
+          border-radius: 8px;
+          box-sizing: border-box;
+        }
+      
+        #contact textarea {
+          min-height: 120px;
+        }
+      
+        #contact .btn {
+          width: 60%;
+          padding: 1rem;
+          font-size: 1rem;
+          border-radius: 25px;
+          margin: 0 auto;
+          cursor: pointer;
+          display: block;
+        }
+      
+        #contact .btn:hover {
+          background-color: #27AE60;
+        }
+      
+        .btn p {
+          margin-left: 0.5rem;
+        }
+      
+        .contact-info {
+          width: 100%;
+          max-width: 350px;
+          margin: 2rem auto 0 auto;
+          background-color: white;
+          padding: 1.5rem;
+          border-radius: 10px;
+          box-sizing: border-box;
+          font-family: poppins, sans-serif;
+          text-align: center;
+        }
+      
+        .contact-info p {
+          margin-top: 1.5rem;
+          font-size: 1rem;
+        }
+      
+        .name {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          width: 100%;
+          justify-content: center;
+        }
+      
+        .get-in-touch {
+          margin-left: 0;
+          text-align: center;
+          padding: 1rem 0;
+        }
+      
+      
+        #reach {
+          font-size: 1.2rem;
+          text-align: center;
+          padding: 1rem;
+        }
+      
+        footer {
+          width: 100%;
+          margin-left: 0;
+          padding: 1rem 1rem;
+          font-size: 0.9rem;
+          text-align: center;
+          box-sizing: border-box;
+        }
+
     .navigation_bar {
         gap: 1rem;
         padding: 1rem;
+    }
 
-        img {
-            width: 15%;
-            padding-left: 0;
-        }
+    .navigation_bar img {
+        width: 15%;
+        padding-left: 0;
     }
 
     .nav-links {
-        gap: 0.5rem;
+        margin-left: 5vh;
+        gap: 2rem;
         font-size: x-small;
+    }
 
-        a {
-            font-size: 10px;
-        }
+    .nav-links a {
+        font-size: 10px;
     }
 
     .home-text {
         width: 80%;
         padding: 5%;
+    }
 
+    .home-text h1{
+        margin-top: 25vh;
+        margin-bottom: 5vh;
     }
 
     #home {
         height: 80vh;
         margin-top: 15%;
+    }
 
-        h1 {
-            font-size: 100%;
-
-        }
+    #home h1 {
+        font-size: 100%;
     }
 
     #about {
         flex-direction: column;
-        width: 90%;
-        padding: 1rem;
+        width: 95%;
+        padding: 1rem 1.5rem;
+        /* margin: 0 auto; */
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    #about h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
 
-        h1 {
-            font-size: 2rem;
+    .features {
+     
+        display: flex;
+        flex-wrap: wrap;
+        width:100%;
+        margin-left: -5vh;
+    }
+    .product img{
+        width: 250px;
+        height:200px;
+    }
+
+    .product-categories {
+        flex-wrap: wrap;
+    }
+
+    .center {
+        grid-column: span 1;
+    }
+
+    .discount h1 {
+        font-size: 1em;
+    }
+
+    .discount p {
+        font-size: 0.8em;
+    }
+    .items {
+        gap: 10px;
+        width:90%;
+        flex-wrap: wrap;
+
+    }
+
+    .product-categories {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .product-categories img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .product-categories .item span {
+        width: 30%;
+    }
+
+    .fresh-grocery {
+        text-align: center;
+        width:30%;
+        p{
+            font-size: 15px;
         }
+        button{
+           text-align: center;
+           padding: 10px;
+        }
+       
+        
+    }
+   
+
+    .fresh-grocery button {
+        width: 50%;
+        padding: 2%;
+    }
+
+    .fresh-grocery h2 {
+        font-size: 1.5rem;
+    }
+
+    .products {
+      padding: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .products h1 {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  
+    .product-grid {
+        flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      
+      
+    }
+
+
+.app-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10vh;
+    margin-top: -10vh;
+}
+#first_phone{
+    width: 30vw;
+    height: 50vh;
+    left:0;
+
+
+}
+#second_phone{
+    width: 30vw;
+    height: 50vh;
+
+
+}
+
+    #testimonials {
+        padding: 1rem;
+      }
+    
+      #testimonials h1 {
+        font-size: 2rem;
+      }
+    
+      #testimonials h2 {
+        font-size: 1.5rem;
+      }
+    
+      .testimonial-grid {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+      }
+    
+      .testimonial, .second-testimonial, .third-testimonial {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+      }
+    
+      .testimonial img,
+      .second-testimonial img,
+      .third-testimonial img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+      }
+    
+      .testimonial p,
+      .second-testimonial p,
+      .third-testimonial p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+      }
+    
+      .testimonial h3,
+      .second-testimonial h3,
+      .third-testimonial h3 {
+        font-size: 1.2rem;
+      }
+
+}
+
+
+@media screen and(min-width: 751px) and (max-width: 999px) {
+ 
+    #contact-us-button{
+        background-color: rgba(101, 143, 61, 1);
+        width:25%;
+        padding: 2% 2% 2% 5%;
+        border: none;
+        border-radius: 20px;
+        color:white;
+        font-size: 1.2em;
+        margin-left: 30vh;
+    }
+    
+
+    .discount {
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding: 15px;
+        border-radius: 8px;
+      }
+    
+      .discount h1 {
+        font-size: 1.8rem;
+        margin: 0 0 8px 0;
+      }
+    
+      .discount p {
+        font-size: 1rem;
+        margin: 0 0 15px 0;
+      }
+
+    html, body {
+      overflow-x: hidden;
+    }
+        #contact {
+          flex-direction: column;
+          gap: 2rem;
+          padding: 1rem 1.5rem;
+          margin-left: 0;
+          width: 100%;
+          box-sizing: border-box;
+        }
+      
+        #contact h2 {
+          font-size: 1.8rem;
+          margin-left: 0;
+          margin-bottom: 2rem;
+          text-align: center;
+          color: white;
+        }
+      
+        #contact form {
+          width: 100%;
+          max-width: 100%;
+          margin-left: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      
+        #contact input,
+        #contact textarea {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1rem;
+          border-radius: 8px;
+          box-sizing: border-box;
+        }
+      
+        #contact textarea {
+          min-height: 120px;
+        }
+      
+        #contact .btn {
+          width: 60%;
+          padding: 1rem;
+          font-size: 1rem;
+          border-radius: 25px;
+          margin: 0 auto;
+          cursor: pointer;
+          display: block;
+        }
+      
+        #contact .btn:hover {
+          background-color: #27AE60;
+        }
+      
+        .btn p {
+          margin-left: 0.5rem;
+        }
+      
+        .contact-info {
+          width: 100%;
+          max-width: 350px;
+          margin: 2rem auto 0 auto;
+          background-color: white;
+          padding: 1.5rem;
+          border-radius: 10px;
+          box-sizing: border-box;
+          font-family: poppins, sans-serif;
+          text-align: center;
+        }
+      
+        .contact-info p {
+          margin-top: 1.5rem;
+          font-size: 1rem;
+        }
+      
+        .name {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          width: 100%;
+          justify-content: center;
+        }
+      
+        .get-in-touch {
+          margin-left: 0;
+          text-align: center;
+          padding: 1rem 0;
+        }
+      
+        
+      
+
+      
+        #reach {
+          font-size: 1.2rem;
+          text-align: center;
+          padding: 1rem;
+        }
+      
+        footer {
+          width: 100%;
+          margin-left: 0;
+          padding: 1rem 1rem;
+          font-size: 0.9rem;
+          text-align: center;
+          box-sizing: border-box;
+        }
+
+    .navigation_bar {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .navigation_bar img {
+        width: 15%;
+        padding-left: 0;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+        font-size: x-small;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .home-text {
+        width: 80%;
+        padding: 5%;
+    }
+
+    .home-text h1{
+        margin-top: 25vh;
+        margin-bottom: 5vh;
+    }
+
+    #home {
+        height: 80vh;
+        margin-top: 15%;
+    }
+
+    #home h1 {
+        font-size: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+        width: 95%;
+        padding: 1rem 1.5rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    #about h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
     }
 
     .features {
@@ -601,6 +1098,292 @@ footer {
         object-fit: cover;
     }
 
+    .discount h1 {
+        font-size: 1em;
+    }
+
+    .discount p {
+        font-size: 0.8em;
+    }
+
+    .item img {
+        width: 80px;
+    }
+
+    .items {
+        gap: 10px;
+    }
+
+    .product-categories {
+        width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .product-categories img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .product-categories .item span {
+        width: 30%;
+    }
+
+    .fresh-grocery {
+        text-align: center;
+    }
+
+    .fresh-grocery button {
+        width: 50%;
+        padding: 2%;
+    }
+
+    .fresh-grocery h2 {
+        font-size: 1.5rem;
+    }
+
+    .products {
+      padding: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .products h1 {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  
+    .products img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      border-radius: 15px;
+    }
+  
+    .product-grid {
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+  
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+   
+    #contact-us-button{
+        background-color: rgba(101, 143, 61, 1);
+        width:25%;
+        padding: 2% 2% 2% 5%;
+        border: none;
+        border-radius: 20px;
+        color:white;
+        font-size: 1.2em;
+        margin-left: 30vh;
+    }
+    
+
+    .discount {
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding: 15px;
+        border-radius: 8px;
+      }
+    
+      .discount h1 {
+        font-size: 1.8rem;
+        margin: 0 0 8px 0;
+      }
+    
+      .discount p {
+        font-size: 1rem;
+        margin: 0 0 15px 0;
+      }
+
+    html, body {
+      overflow-x: hidden;
+    }
+        #contact {
+          flex-direction: column;
+          gap: 2rem;
+          padding: 1rem 1.5rem;
+          margin-left: 0;
+          width: 100%;
+          box-sizing: border-box;
+        }
+      
+        #contact h2 {
+          font-size: 1.8rem;
+          margin-left: 0;
+          margin-bottom: 2rem;
+          text-align: center;
+          color: white;
+        }
+      
+        #contact form {
+          width: 100%;
+          max-width: 100%;
+          margin-left: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      
+        #contact input,
+        #contact textarea {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1rem;
+          border-radius: 8px;
+          box-sizing: border-box;
+        }
+      
+        #contact textarea {
+          min-height: 120px;
+        }
+      
+        #contact .btn {
+          width: 60%;
+          padding: 1rem;
+          font-size: 1rem;
+          border-radius: 25px;
+          margin: 0 auto;
+          cursor: pointer;
+          display: block;
+        }
+      
+        #contact .btn:hover {
+          background-color: #27AE60;
+        }
+      
+        .btn p {
+          margin-left: 0.5rem;
+        }
+      
+        .contact-info {
+          width: 100%;
+          max-width: 350px;
+          margin: 2rem auto 0 auto;
+          background-color: white;
+          padding: 1.5rem;
+          border-radius: 10px;
+          box-sizing: border-box;
+          font-family: poppins, sans-serif;
+          text-align: center;
+        }
+      
+        .contact-info p {
+          margin-top: 1.5rem;
+          font-size: 1rem;
+        }
+      
+        .name {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          width: 100%;
+          justify-content: center;
+        }
+      
+        .get-in-touch {
+          margin-left: 0;
+          text-align: center;
+          padding: 1rem 0;
+        }
+      
+
+        
+      
+      
+        #reach {
+          font-size: 1.2rem;
+          text-align: center;
+          padding: 1rem;
+        }
+      
+        footer {
+          width: 100%;
+          margin-left: 0;
+          padding: 1rem 1rem;
+          font-size: 0.9rem;
+          text-align: center;
+          box-sizing: border-box;
+        }
+
+    .navigation_bar {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .navigation_bar img {
+        width: 15%;
+        padding-left: 0;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+        font-size: x-small;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .home-text {
+        width: 80%;
+        padding: 5%;
+    }
+
+    .home-text h1{
+        margin-top: 25vh;
+        margin-bottom: 5vh;
+    }
+
+    #home {
+        height: 80vh;
+        margin-top: 15%;
+    }
+
+    #home h1 {
+        font-size: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+        width: 95%;
+        padding: 1rem 1.5rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    #about h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-categories {
+        flex-wrap: wrap;
+    }
+
+    .center {
+        grid-column: span 1;
+    }
+
+    .item img {
+        height: 200px;
+        object-fit: cover;
+    }
 
     .discount h1 {
         font-size: 1em;
@@ -618,256 +1401,75 @@ footer {
         gap: 10px;
     }
 
-
     .product-categories {
         width: 90%;
         flex-direction: column;
         gap: 1rem;
+    }
 
-        img {
-            width: 100%;
-            height: 200px;
-        }
+    .product-categories img {
+        width: 100%;
+        height: 200px;
+    }
 
-        .item span {
-            width: 30%;
-        }
+    .product-categories .item span {
+        width: 30%;
     }
 
     .fresh-grocery {
         text-align: center;
+    }
 
-        button {
-            width: 50%;
-            padding: 2%;
-        }
+    .fresh-grocery button {
+        width: 50%;
+        padding: 2%;
+    }
 
-        h2 {
-            font-size: 1.5rem;
-        }
+    .fresh-grocery h2 {
+        font-size: 1.5rem;
     }
 
     .products {
-        padding: 1rem;
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        img {
-            width: 150px;
-            height: 120px;
-        }
+      padding: 1rem;
+      width: 100%;
+      box-sizing: border-box;
     }
-
+  
+    .products h1 {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  
+    .products img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      border-radius: 15px;
+    }
+  
     .product-grid {
-        flex-direction: column;
-        gap: 2rem;
-        width: 90%;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
     }
-    .testimonial-grid{
-        width:100%;
-    }
+  
 }
 
-@media (min-width: 751px) and (max-width: 999px) {
-    .discount h1 {
-        font-size: 1.3em;
-    }
-
-    .discount p {
-        font-size: 0.9em;
-    }
-
-    .item img {
-        width: 100px;
-    }
-
-    .items {
-        gap: 15px;
-    }
-
-    .product-categories {
-        flex-wrap: wrap;
-    }
-
-    .center {
-        grid-column: span 2;
-    }
-
-    .item img {
-        height: 250px;
-        object-fit: cover;
-    }
-
-    .navigation_bar {
-        gap: 20%;
-
-        img {
-            width: 10%;
-        }
-    }
-
-    .home-text {
-        width: 70%;
-        padding: 7%;
-    }
-
-    #home {
-        height: 85vh;
-        margin-top: 10%;
-    }
-
-    #about {
-        width: 80%;
-        padding: 1.5rem;
-
-        h1 {
-            font-size: 3rem;
-        }
-    }
 
 
 
 
-    .product-categories {
-        width: 90%;
-        gap: 1.5rem;
 
-        img {
-            width: 300px;
-            height: 250px;
-        }
 
-        .item span {
-            width: 25%;
-        }
-    }
 
-    .fresh-grocery {
-        button {
-            width: 40%;
-            padding: 2.5%;
-        }
 
-        h2 {
-            font-size: 2rem;
-        }
-    }
-    .products {
-        padding: 1.5rem;
 
-        h1 {
-            font-size: 3rem;
-        }
 
-        img {
-            width: 200px;
-            height: 160px;
-        }
-    }
 
-    .product-grid {
-        gap: 5%;
-        width: 90%;
-    }
-}
-
-@media (min-width: 1000px) and (max-width: 1300px) {
-    .discount h1 {
-        font-size: 1.8em;
-    }
-
-    .discount p {
-        font-size: 1.2em;
-    }
-
-    .item img {
-        width: 150px;
-    }
-
-    .items {
-        gap: 25px;
-    }
-
-    .product-categories {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .center {
-        grid-column: span 3;
-    }
-
-    .item img {
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .navigation_bar {
-        gap: 30%;
-
-        img {
-            width: 9%;
-        }
-    }
-
-    .home-text {
-        width: 60%;
-        padding: 8%;
-    }
-
-    #home {
-        margin-top: 7%;
-    }
-
-    #about {
-        width: 70%;
-        padding: 2rem;
-
-        h1 {
-            font-size: 3.5rem;
-        }
-    }
-    .product-categories {
-        width: 85%;
-        gap: 2rem;
-
-        img {
-            width: 350px;
-            height: 280px;
-        }
-
-        .item span {
-            width: 22%;
-        }
-    }
-
-    .fresh-grocery {
-        button {
-            width: 35%;
-            padding: 2.5%;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-        }
-    }
-
-    .products {
-        padding: 2rem;
-
-        h1 {
-            font-size: 3.5rem;
-        }
-
-        img {
-            width: 225px;
-            height: 180px;
-        }
-    }
-
-    .product-grid {
-        gap: 7%;
-        width: 85%;
-    }
-}
+  
+ 
