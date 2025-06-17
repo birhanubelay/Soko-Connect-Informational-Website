@@ -79,6 +79,7 @@ html{
 }
 #home p {
     font-size: 1.2rem;
+  
     margin-bottom: 1.5rem;
 }
 
@@ -101,7 +102,7 @@ html{
     gap: 2rem;
     padding: 2rem;
     background-color: #fff;
-    /* flex-wrap: wrap; */
+
 }
 .feature {
     text-align: center;
