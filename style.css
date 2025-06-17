@@ -3,40 +3,47 @@
     src: url(Poppins/Poppins-Light.ttf)
 }
 
-body {
-    font-family: poppins;
-    overflow-x: hidden;
-    margin-left: -0;
+@font-face {
+    font-family: itim;
+    src: url(Itim-Regular.ttf);
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-.intro {
+
+.introduction {
     position: fixed;
-    border: none;
     background-color: rgba(101, 143, 61, 1);
     text-align: center;
     color: white;
     width: 100%;
     top: 0;
-    z-index: 1;
+    z-index: 5;
+    left: 0;
+    right: 0;
+}
+
+.navigation-background {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    top: 5vh;
+    z-index: 5;
+    left: 0;
+    right: 0;
 }
 
 .navigation_bar {
     display: flex;
-    background-color: white;
-    gap: 40%;
+    justify-content: space-between;
     align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 5vh;
-    left: 0;
-    z-index: 1;
+    width: 80%;
+    margin: auto;
 
     img {
         width: 8%;
         height: 6%;
-        padding-left: 10%;
     }
 }
 
@@ -44,157 +51,161 @@ html{
     list-style: none;
     display: flex;
     gap: 1.5rem;
-}
 
-.nav-links li a {
-    color: rgb(8, 1, 1);
-    text-decoration: none;
-    font-size: 1rem;
+    a {
+        color: rgb(8, 1, 1);
+        text-decoration: none;
+        font-size: 120%;
+
+    }
 }
 
 .nav-links li a:hover {
     text-decoration: underline;
-    color:orange;
+    color: orange;
 }
 
 #home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/vegatables.jpg);
     background-repeat: no-repeat;
-    height: 95vh;
+    width: 100%;
+    height: 100vh;
     background-size: cover;
-    line-height: 1.6;
-
-    h1 {
-        font-size: 400%;
-        color: hsl(150, 29%, 97%);
-    }
+    line-height: 1.4;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .home-text {
-    padding: 10%;
-    width: 70%;
+    padding: 15%;
+    padding-top: 15%;
+    width: 60%;
     text-align: center;
     margin: auto;
-}
-#home p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    font-family: itim;
+
+    h1 {
+        font-size: 500%;
+        font-weight: lighter;
+        color: hsl(150, 29%, 97%);
+    }
 }
 
 #get_btn {
     background-color: orange;
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 9px 12px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 20px;
+    font-size: xx-large;
 }
 
 #get_btn:hover {
     background-color: rgba(101, 143, 61, 1);
 }
 
-.features {
+.services {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: #fff;
-    flex-wrap: wrap;
-}
-.feature {
-    text-align: center;
-    max-width: 300px;
-    padding: 2rem;
-}
-.feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-.discount {
-    background-color: orange;
-    padding: 20px;
-    text-align: center;
-    color: black;
-    border-radius: 10px;
-}
-.discount h1 {
-    font-size: 250%;
-    margin: 0 0 10px 0;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-top: 5%;
+    font-family: poppins;
 }
 
-.discount p {
-    font-size: 21px;
-    margin: 0 0 20px 0;
+.service {
+    text-align: center;
+    max-width: 300px;
+    font-size: 120%;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+    font-family: poppins;
+    font-size: 120%;
+    padding-top: 5%;
+
+    h1 {
+        font-size: 400%;
+        color: rgba(101, 143, 61, 1);
+    }
+
+}
+
+.about-us {
+    padding-left: 5%;
+    padding-bottom: 6%;
+}
+
+#contact-us-button {
+    background-color: rgba(101, 143, 61, 1);
+    padding: 1.5% 4%;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin-left: 30%;
+    font-size: 115%;
+    font-family: poppins;
+}
+
+.discount {
+    background-color: rgba(238, 170, 62, 1);
+    text-align: center;
+    font-weight: lighter;
+    color: black;
+    font-size: 150%;
+    margin-top: 5%;
+    font-family: poppins;
+
+    h1 {
+        font-size: 250%;
+        padding: 2%;
+        font-family: itim;
+    }
 }
 
 .items {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    width: 70%;
+    width: 90%;
     margin: auto;
-    padding: 3rem;
 }
 
 .item {
     position: relative;
     text-align: center;
+    padding: 2%;
+
+    img {
+        height: 250px;
+        width: 300px;
+        border-radius: 14px;
+    }
 }
 
-.item img {
-    height: 200px;
-    width: 250px;
-    border-radius: 5px;
-}
-
-.price {
+.item .price {
     position: absolute;
-    top: -10px;
-    left: 15%;
-    transform: translateX(-50%);
+    top: -10%;
+    left: -5%;
     background: rgba(255, 255, 255, 0.8);
-    padding: 8px 10px;
+    padding: 15px 15px;
     border-radius: 50%;
-    font-size: 0.9em;
 }
 
 .original-price {
     text-decoration: line-through;
-    color:red;
+    color: red;
 }
 
 .discounted-price {
     color: #000;
     font-weight: bold;
-}
-
-#about {
-    padding: 2rem;
-    text-align: left;
-    background-color: #f4f4f4;
-    display: flex;
-    align-items: center;
-    width: 60%;
-    margin: auto;
-    justify-content: space-between;
-
-    h1 {
-        font-size: 400%;
-        color:rgba(101, 143, 61, 1);
-        text-align: center;
-    }
-}
-
-#contact-us-button{
-    background-color: rgba(101, 143, 61, 1);
-    width:25%;
-    padding: 2% 2% 2% 5%;
-    border: none;
-    border-radius: 20px;
-    color:white;
-    font-size: 1.2em;
 }
 
 .product-categories {
@@ -204,55 +215,56 @@ html{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 5%;
-    flex-wrap: wrap;
+    padding-top: 7%;
+    font-family: poppins;
+    font-size: 120%;
+
     img {
         height: 300px;
         width: 400px;
         position: relative;
-        z-index: -1;
     }
+
     .item span {
-        border: none;
         background-color: rgba(101, 143, 61, 1);
         color: white;
-        padding: 5px 10px;
-        position: relative;
-        left: 5vw;
-
+        padding: 5px 30px;
+        position: absolute;
+        left: 4;
+        top: 80%;
+        z-index: 2;
     }
 }
 
 .fresh-grocery {
-    line-height: 1.6;
     button {
         background-color: rgba(101, 143, 61, 1);
-         padding: 3% 3% 3% 5%;
+        padding: 3% 3% 3% 4.5%;
         width: 30%;
         border: none;
         border-radius: 20px;
         color: white;
-        margin-left: 30%;
-        font-size: 18px;
-    }
-    h2 {
-        font-size: 300%;
-        color:rgba(101, 143, 61, 1);
+        font-size: 110%;
     }
 
-    p {
-        font-size: 21px;
+    h2 {
+        font-size: 300%;
+        color: rgba(101, 143, 61, 1);
     }
 }
-.products {
-    padding: 2rem;
+
+#products {
     text-align: center;
-    flex-wrap: wrap;
+    font-size: 120%;
+    font-family: poppins;
+    padding-top: 1%;
+
     img {
         height: 200px;
         width: 250px;
         border-radius: 20px;
     }
+
     h1 {
         font-size: 400%;
         color: rgba(101, 143, 61, 1);
@@ -261,385 +273,331 @@ html{
 
 .product-grid {
     display: flex;
-    gap: 10%;
+    justify-content: space-between;
     width: 80%;
     margin: auto;
-    padding-top: 3%;
+    padding-top: 4%;
     line-height: 2%;
-}
-@font-face {
-    font-family: itim;
-    src: url(Itim-Regular.ttf);
 }
 
 #testimonials {
-    padding: 0.5vw;
+    background-color: #a4c778;
     text-align: center;
-    border: none;
-    margin-top: 5%;
-    background-color: rgba(164, 199, 120, 1);
     font-family: poppins;
-    width: 100vw;
-    margin-left: -2vw;
-}
+    color: #000;
+    margin-top: 5%;
+    font-size: 120%;
 
-.testimonials h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    h1 {
+        font-size: 400%;
+        color: rgba(101, 143, 61, 1);
+    }
+
+    h2 {
+        font-size: 200%;
+        margin-top: -2%;
+    }
+
+    p {
+        font-style: italic;
+    }
 }
 
 .testimonial-grid {
     display: flex;
-    margin-left: 7vw;
+    justify-content: space-between;
     width: 80%;
     margin: auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding-top: 2%;
+    align-items: first baseline;
+
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
 }
 
 .testimonial {
-    border: none;
-    background-color: rgba(164, 199, 120, 1);
-    padding: 1.5rem;
-    border-radius: 5px;
-    width: 15vw;
-    margin-top: 5vh;
-}
-
-.second-testimonial {
-    border: none;
-    background-color: rgba(164, 199, 120, 1);
-    padding: 1.5rem;
-    border-radius: 5px;
-    width: 15vw;
-    margin-top: 5vh;
-}
-
-.third-testimonial {
-    border: none;
-    background-color: rgba(164, 199, 120, 1);
-    padding: 1.5rem;
-    border-radius: 5px;
-    width: 15vw;
-    margin-top: 5vh;
-}
-.testimonial p {
-    font-style: italic;
-    margin-bottom: 1rem;
+    width: 20%;
 }
 
 #get-app {
-    padding: 2rem;
-    margin-left: 10vw;
     display: flex;
-    gap: 15vw;
-    margin-top: -5vh;
-    position: relative;
-    top: 5vh;
-}
-
-#get-app h2 {
-    font-size: 4em;
-    font-family: itim;
-    margin-left: 1.5vw;
-}
-
-#get-app p {
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    align-items: start;
+    font-size: 120%;
     font-family: poppins;
-    position: relative; 
-}
+    margin-top: 5%;
 
-#first_phone {
-    width: 22vw;
-    height: 80vh;
-    position: relative;
-    top: 20vh;
-    left: 3vw;
-}
+    h1 {
+        font-size: 450%;
+        font-family: itim;
+    }
 
-#second_phone {
-    width: 23vw;
-    height: 80vh;
-    position: relative;
-    z-index: -1;
-    top: 15vh;
-}
-
-#play-store {
-    padding: 0.00vw 2vw;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 20vh;
-    border: none;
-    background-color: black;
-}
-
-#play {
-    color: white;
-    font-size: 2em;
-    
-}
-
-button h1 {
-    font-size: 1em;
-}
-
-button {
-    display: flex;
-    text-align: center;
-}
-
-span {
-    color: white;
-}
-
-.get-app h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.get-app .btn {
-    background-color: white;
-    color: green;
-}
-
-.get-app .btn:hover {
-    background-color: #F4F4F4;
+    button {
+        display: flex;
+        align-items: center;
+        background-color: #000;
+        border-radius: 30px;
+        color: white;
+        padding: 0% 8%;
+    }
 }
 
 #contact {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    gap: 20vw;
-    padding: 2rem;
-    border: none;
     background-color: rgba(101, 143, 61, 1);
-    margin-left: -2vw;
-    width: 100vw;
-}
-
-#contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-left: 15vw;
-    margin-bottom: 10vh;
-    color: white;
+    margin-top: -12%;
+    z-index: 1;
+    position: relative;
+    right: 0;
+    left: 0;
     font-family: poppins;
+    font-size: 120%;
+
+    input {
+        padding: 4%;
+    }
+
+    textarea {
+        padding: 15% 43.5%;
+        margin-top: 8%;
+    }
+
+    h1 {
+        color: white;
+        font-family: poppins;
+        font-size: 350%;
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 250%;
+    }
+
 }
 
-#contact form {
-    max-width: 600px;
-    margin-left: 5vw;
+.contact-us {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 50vw;
-}
-
-#contact input,
-#contact textarea {
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-#contact textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-#contact .btn {
-    background-color: rgba(238, 171, 62, 1);
-    color: white;
-    border: none;
-    cursor: pointer;
-    width: 7vw;
-    padding: 0.5vw;
-    border-radius: 20px;
-}
-
-.btn p {
-    margin-left: 1.2vw;
-}
-
-#contact .btn:hover {
-    background-color: #27AE60;
-}
-
-.contact-info {
-    font-family: poppins;
-    border: none;
-    background-color: white;
-    margin-top: -3.3vh;
-    width:20%;
-}
-
-.contact-info p {
-    margin-top: 5vh
+    width: 70%;
+    justify-content: space-between;
+    margin: auto;
 }
 
 .name {
     display: flex;
-    gap: 6.8vw;
-    width: 8vw;
+    gap: 20%;
+    margin-top: 7%;
+    line-height: 1.6;
 }
 
-.get-in-touch {
-    margin-left: 7vw;
+.contact-info {
+    background-color: white;
+    padding: 4%;
+    line-height: 1.7;
+
+    span {
+        padding-left: 10%;
+    }
 }
 
-.testimonial img {
-    width: 8vw;
-    height: 16vh;
-    border-radius: 400px;
-}
-
-.second-testimonial img {
-    width: 8vw;
-    height: 16vh;
-    border-radius: 400px;
-}
-
-.third-testimonial img {
-    width: 8vw;
-    height: 16vh;
-    border-radius: 400px;
-}
-
-#testimonials p {
-    font-size: 1.5em;
-}
-
-#testimonials h2 {
-    font-size: 2em;
-}
-
-#testimonials h1 {
-    font-size: 3em;
-    color: green;
-}
-
-#reach {
-    font-size: 1.5em;
-    color: #000;
-}
-
-footer {
-    background-color: rgba(101, 143, 61, 1);
+#send-now {
+    padding: 2% 12%;
+    background-color: orange;
     color: white;
-    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-top: 6%;
+    font-size: 120%;
     font-family: poppins;
-    width: 100vw;
-    margin-left: -2vw;
-    position: relative;
-    top: -1vh;
 }
 
-@media (max-width: 750px) {
-    .navigation_bar {
-        gap: 1rem;
-        padding: 1rem;
+#send-now :hover {
+    background-color: green;
 
-        img {
-            width: 15%;
-            padding-left: 0;
-        }
+}
+
+#copyright {
+    text-align: center;
+    color: white;
+    padding: 4% 2% 1%;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    html,
+    body {
+        overflow-x: hidden;
     }
 
-    .nav-links {
-        gap: 0.5rem;
-        font-size: x-small;
-
-        a {
-            font-size: 10px;
-        }
-    }
-
-    .home-text {
-        width: 80%;
-        padding: 5%;
-
-    }
-
-    #home {
-        height: 80vh;
-        margin-top: 15%;
-
-        h1 {
-            font-size: 100%;
-
-        }
+    #contact-us-button {
+        width: 40%;
+        font-size: 90%;
+        margin-left: 25%;
     }
 
     #about {
         flex-direction: column;
         width: 90%;
+        font-size: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        h1 {
+            font-size: 300%;
+            text-align: center;
+        }
+
+        img {
+            width: 80%;
+            height: 80%;
+        }
+    }
+
+    .about-us {
+        font-size: 80%;
+    }
+
+    .services {
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+
+        p {
+            font-size: 90%;
+        }
+    }
+
+    .navigation_bar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navigation_bar img {
+        width: 30%;
+        margin: auto;
+
+    }
+
+    .nav-links {
+        display: none;
+
+    }
+
+    .home-text {
+        margin-top: 15%;
+        width: 90%;
+        line-height: 1;
+        padding-left: 2%;
+
+        h1 {
+            font-size: 250%;
+        }
+    }
+
+    #home {
+        height: 40%;
+        width: 100%;
+        margin-top: -1%;
+    }
+
+    #get_btn {
+        font-size: medium;
+        padding: 10px 12px;
+    }
+
+    .discount {
+        font-size: 90%;
+
+        img {
+            width: 70%;
+            height: 70%;
+        }
+    }
+
+    .items {
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+
+    .item {
+        padding-top: 10%;
+    }
+
+    .item .price {
+        top: 3%;
+        left: 5%;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 8px 8px;
+    }
+
+    .product-categories {
+        flex-direction: column;
+        font-size: 100%;
+        margin: auto;
+
+        h2 {
+            font-size: 170%;
+        }
+    }
+
+    .product-categories img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .product-categories .item span {
+        width: 20%;
+        margin-top: 2%;
+    }
+
+    .fresh-grocery {
+        width: 90%;
+
+        button {
+            width: 40%;
+            padding: 2% 0%;
+        }
+    }
+
+    #products {
+        width: 100%;
+        font-size: 100%;
+
+        h1 {
+            font-size: 250%;
+            text-align: center;
+        }
+
+        img {
+            width: 130px;
+            height: 100px;
+        }
+    }
+
+    .product {
+        padding: 2%;
+    }
+
+    .product-grid {
+        flex-wrap: wrap;
+        width: 90%;
+
+    }
+
+    #testimonials {
         padding: 1rem;
 
         h1 {
             font-size: 2rem;
-        }
-    }
-
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-categories {
-        flex-wrap: wrap;
-    }
-
-    .center {
-        grid-column: span 1;
-    }
-
-    .item img {
-        height: 200px;
-        object-fit: cover;
-    }
-
-
-    .discount h1 {
-        font-size: 1em;
-    }
-
-    .discount p {
-        font-size: 0.8em;
-    }
-
-    .item img {
-        width: 80px;
-    }
-
-    .items {
-        gap: 10px;
-    }
-
-
-    .product-categories {
-        width: 90%;
-        flex-direction: column;
-        gap: 1rem;
-
-        img {
-            width: 100%;
-            height: 200px;
-        }
-
-        .item span {
-            width: 30%;
-        }
-    }
-
-    .fresh-grocery {
-        text-align: center;
-
-        button {
-            width: 50%;
-            padding: 2%;
         }
 
         h2 {
@@ -647,227 +605,613 @@ footer {
         }
     }
 
-    .products {
+    .testimonial-grid {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    .testimonial {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            padding: 0 1rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+    }
+
+    #get-app {
+        flex-direction: column;
+        justify-content: center;
+        font-size: 100%;
+        text-align: center;
+
+        img {
+            width: 90%;
+            height: 90%;
+            margin-top: 5%;
+        }
+
+        width:100%;
+
+        h1 {
+            font-size: 250%;
+        }
+
+        button {
+            padding: 0% 2%;
+            font-size: small;
+            margin-left: 25%;
+        }
+    }
+
+    #contact {
+        margin-top: -50%;
+        width: 100%;
+        font-size: 100%;
+
+        input {
+            padding: 2%;
+            width: 90%;
+        }
+
+        textarea {
+            padding: 13% 23%;
+            margin-top: 8%;
+        }
+
+        h1 {
+            font-size: 250%;
+        }
+
+        h2 {
+            font-size: 150%;
+            text-align: center;
+        }
+    }
+
+    .contact-us {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .contact-info {
+        padding: 3% 3% 3% 7%;
+
+        span {
+            padding-left: 10%;
+        }
+    }
+
+    #send-now {
+        padding: 2% 5%;
+        border-radius: 15px;
+        margin-top: 6%;
+        font-size: 100%;
+        margin-left: 35%;
+        margin-bottom: 5%;
+    }
+
+    #copyright {
+        text-align: center;
+        color: white;
+        padding: 4% 2% 1%;
+        font-size: 80%;
+    }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 999px) {
+
+   html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #contact-us-button {
+        width: 35%;
+        font-size: 110%;
+        margin-left: 35%;
+    }
+
+    #about {
+        flex-direction: column;
+        width: 90%;
+       font-size: 1.7rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        h1 {
+            font-size: 280%;
+            text-align: center;
+        }
+
+        img {
+            width: 80%;
+            height: 80%;
+        }
+    }
+
+    .about-us {
+        font-size: 100%;
+    }
+
+    .services {
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        p {
+            font-size: 1.6rem;
+        }
+    }
+    .navigation_bar {
+        width: 100%;
+    }
+    .navigation-background{
+        margin-top: -2%;
+    }
+    .navigation_bar img {
+        width: 23%;
+        margin: auto;
+    }
+    .home-text {
+        margin-top: 15%;
+        width: 90%;
+        line-height: 1;
+        padding-left: 2%;
+
+        h1 {
+            font-size: 350%;
+        }
+    }
+    #home {
+        height: 40%;
+        width: 100%;
+        margin-top: -1%;
+    }
+    #get_btn {
+        font-size: large;
+        padding: 10px 12px;
+    }
+    .discount {
+        font-size: 1.6rem;
+
+        img {
+            width: 40%;
+            height: 40%;
+        }
+    }
+
+    .items {
+        flex-wrap: wrap;
+        width: 95%;
+        margin: auto;
+    }
+    .item {
+        padding-top: 10%;
+    }
+
+    .item .price {
+        top: 9%;
+        left: 25%;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 9px 9px;
+    }
+
+    .product-categories {
+        flex-wrap: wrap;
+        font-size: 1.6rem;
+        justify-content: center;
+        margin: auto;
+        h2 {
+            font-size: 200%;
+        }
+    }
+    .product-categories img {
+        width: 280px;
+        height: 200px;
+    }
+    .product-categories .item span {
+        width: 35%;
+        margin-top: 2%;
+    }
+    .fresh-grocery {
+        width: 50%;
+        button {
+            width: 50%;
+            padding: 2% 0%;
+        }
+    }
+    #products {
+        width: 100%;
+        font-size: 100%;
+
+        h1 {
+            font-size: 280%;
+            text-align: center;
+        }
+
+        img {
+            width: 130px;
+            height: 100px;
+        }
+    }
+    .product {
+        padding: 2%;
+    }
+    .product-grid {
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    #testimonials {
         padding: 1rem;
 
         h1 {
             font-size: 2rem;
         }
 
-        img {
-            width: 150px;
-            height: 120px;
-        }
-    }
-
-    .product-grid {
-        flex-direction: column;
-        gap: 2rem;
-        width: 90%;
-    }
-    .testimonial-grid{
-        width:100%;
-    }
-}
-
-@media (min-width: 751px) and (max-width: 999px) {
-    .discount h1 {
-        font-size: 1.3em;
-    }
-
-    .discount p {
-        font-size: 0.9em;
-    }
-
-    .item img {
-        width: 100px;
-    }
-
-    .items {
-        gap: 15px;
-    }
-
-    .product-categories {
-        flex-wrap: wrap;
-    }
-
-    .center {
-        grid-column: span 2;
-    }
-
-    .item img {
-        height: 250px;
-        object-fit: cover;
-    }
-
-    .navigation_bar {
-        gap: 20%;
-
-        img {
-            width: 10%;
-        }
-    }
-
-    .home-text {
-        width: 70%;
-        padding: 7%;
-    }
-
-    #home {
-        height: 85vh;
-        margin-top: 10%;
-    }
-
-    #about {
-        width: 80%;
-        padding: 1.5rem;
-
-        h1 {
-            font-size: 3rem;
-        }
-    }
-
-
-
-
-    .product-categories {
-        width: 90%;
-        gap: 1.5rem;
-
-        img {
-            width: 300px;
-            height: 250px;
-        }
-
-        .item span {
-            width: 25%;
-        }
-    }
-
-    .fresh-grocery {
-        button {
-            width: 40%;
-            padding: 2.5%;
-        }
-
         h2 {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
-    .products {
-        padding: 1.5rem;
 
-        h1 {
-            font-size: 3rem;
-        }
+    .testimonial-grid {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .testimonial {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
 
         img {
-            width: 200px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            padding: 0 1rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
         }
     }
+    #get-app {
+        flex-direction: column;
+        justify-content: center;
+        font-size: 120%;
+        text-align: center;
 
-    .product-grid {
-        gap: 5%;
+        img {
+            width: 90%;
+            height: 90%;
+            margin-top: 5%;
+        }
+
+        width:100%;
+
+        h1 {
+            font-size: 280%;
+        }
+
+        button {
+            padding: 0% 2%;
+            font-size: small;
+            margin-left: 25%;
+        }
+    }
+    #contact {
+        margin-top: -50%;
+        width: 100%;
+        font-size: 1.6rem;
+        input {
+            padding: 2%;
+            width: 90%;
+        }
+        textarea {
+            padding: 13% 35%;
+            margin-top: 8%;
+        }
+        h1 {
+            font-size: 280%;
+        }
+        h2 {
+            font-size: 180%;
+            text-align: center;
+        }
+    }
+    .contact-us {
+        flex-direction: column;
         width: 90%;
+    }
+    .contact-info {
+        padding: 3% 3% 3% 7%;
+
+        span {
+            padding-left: 10%;
+        }
+    }
+    #send-now {
+        padding: 2% 5%;
+        border-radius: 15px;
+        margin-top: 6%;
+        font-size: 120%;
+        margin-left: 35%;
+        margin-bottom: 5%;
+    }
+    #copyright {
+        text-align: center;
+        color: white;
+        padding: 4% 2% 1%;
+        font-size: 1.2rem;
     }
 }
 
 @media (min-width: 1000px) and (max-width: 1300px) {
-    .discount h1 {
-        font-size: 1.8em;
+ html,
+    body {
+        overflow-x: hidden;
     }
 
-    .discount p {
-        font-size: 1.2em;
-    }
-
-    .item img {
-        width: 150px;
-    }
-
-    .items {
-        gap: 25px;
-    }
-
-    .product-categories {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .center {
-        grid-column: span 3;
-    }
-
-    .item img {
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .navigation_bar {
-        gap: 30%;
-
-        img {
-            width: 9%;
-        }
-    }
-
-    .home-text {
-        width: 60%;
-        padding: 8%;
-    }
-
-    #home {
-        margin-top: 7%;
+    #contact-us-button {
+        width: 35%;
+        font-size: 110%;
+        margin-left: 35%;
     }
 
     #about {
-        width: 70%;
-        padding: 2rem;
+        flex-direction: column;
+        width: 90%;
+       font-size: 1.7rem;
+        margin: 0 auto;
+        box-sizing: border-box;
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 280%;
+            text-align: center;
         }
-    }
-    .product-categories {
-        width: 85%;
-        gap: 2rem;
 
         img {
-            width: 350px;
-            height: 280px;
-        }
-
-        .item span {
-            width: 22%;
+            width: 80%;
+            height: 80%;
         }
     }
 
+    .about-us {
+        font-size: 100%;
+    }
+
+    .services {
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        p {
+            font-size: 1.6rem;
+        }
+    }
+    .navigation_bar {
+        width: 100%;
+    }
+    .navigation-background{
+        margin-top: -2%;
+    }
+    .navigation_bar img {
+        width: 23%;
+        margin: auto;
+    }
+    .home-text {
+        margin-top: 15%;
+        width: 90%;
+        line-height: 1;
+        padding-left: 2%;
+
+        h1 {
+            font-size: 350%;
+        }
+    }
+    #home {
+        height: 40%;
+        width: 100%;
+        margin-top: -1%;
+    }
+    #get_btn {
+        font-size: large;
+        padding: 10px 12px;
+    }
+    .discount {
+        font-size: 1.6rem;
+
+        img {
+            width: 40%;
+            height: 40%;
+        }
+    }
+
+    .items {
+        flex-wrap: wrap;
+        width: 95%;
+        margin: auto;
+    }
+    .item {
+        padding-top: 10%;
+    }
+
+    .item .price {
+        top: 9%;
+        left: 25%;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 9px 9px;
+    }
+
+    .product-categories {
+        flex-wrap: wrap;
+        font-size: 1.6rem;
+        justify-content: center;
+        margin: auto;
+        h2 {
+            font-size: 200%;
+        }
+    }
+    .product-categories img {
+        width: 280px;
+        height: 200px;
+    }
+    .product-categories .item span {
+        width: 35%;
+        margin-top: 2%;
+    }
     .fresh-grocery {
+        width: 50%;
         button {
-            width: 35%;
-            padding: 2.5%;
+            width: 50%;
+            padding: 2% 0%;
+        }
+    }
+    #products {
+        width: 100%;
+        font-size: 100%;
+
+        h1 {
+            font-size: 280%;
+            text-align: center;
+        }
+
+        img {
+            width: 130px;
+            height: 100px;
+        }
+    }
+    .product {
+        padding: 2%;
+    }
+    .product-grid {
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    #testimonials {
+        padding: 1rem;
+
+        h1 {
+            font-size: 2rem;
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
     }
 
-    .products {
-        padding: 2rem;
+    .testimonial-grid {
+        flex-wrap: wrap;
+        width: 100%;
+    }
 
-        h1 {
-            font-size: 3.5rem;
-        }
+    .testimonial {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
 
         img {
-            width: 225px;
+            width: 180px;
             height: 180px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            padding: 0 1rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
         }
     }
+    #get-app {
+        flex-direction: column;
+        justify-content: center;
+        font-size: 120%;
+        text-align: center;
 
-    .product-grid {
-        gap: 7%;
-        width: 85%;
+        img {
+            width: 90%;
+            height: 90%;
+            margin-top: 5%;
+        }
+
+        width:100%;
+
+        h1 {
+            font-size: 280%;
+        }
+
+        button {
+            padding: 0% 2%;
+            font-size: small;
+            margin-left: 25%;
+        }
+    }
+    #contact {
+        margin-top: -50%;
+        width: 100%;
+        font-size: 1.6rem;
+        input {
+            padding: 2%;
+            width: 90%;
+        }
+        textarea {
+            padding: 13% 35%;
+            margin-top: 8%;
+        }
+        h1 {
+            font-size: 280%;
+        }
+        h2 {
+            font-size: 180%;
+            text-align: center;
+        }
+    }
+    .contact-us {
+        flex-direction: column;
+        width: 90%;
+    }
+    .contact-info {
+        padding: 3% 3% 3% 7%;
+
+        span {
+            padding-left: 10%;
+        }
+    }
+    #send-now {
+        padding: 2% 5%;
+        border-radius: 15px;
+        margin-top: 6%;
+        font-size: 120%;
+        margin-left: 35%;
+        margin-bottom: 5%;
+    }
+    #copyright {
+        text-align: center;
+        color: white;
+        padding: 4% 2% 1%;
+        font-size: 1.2rem;
     }
 }
